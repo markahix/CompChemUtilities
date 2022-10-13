@@ -7,3 +7,8 @@ As these scripts are generated and made available, this README will be updated t
 
 Each script is meant to run without dependencies beyond a standard `conda` installation, and in such cases where a dependency is necessary, 
 the script will first check for it and if unable to locate it, will advise the user on method by which it may be installed.
+
+## Visualizers
+
+**PDBtoChemDraw**
+- Generates a 2D ChemDraw-style structure from a provided single-molecule PDB.
