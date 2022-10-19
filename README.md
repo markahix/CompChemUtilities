@@ -19,4 +19,5 @@ the script will first check for it and if unable to locate it, will advise the u
 ## Converters
 
 **MOLtoPDB**
-- Generates a PDB from a MOL file, such as from [MolView](https://molview.org)
+- Generates a PDB from a MOL file, such as from [MolView](https://molview.org)/
+- Requires installation of [Chimera](https://www.cgl.ucsf.edu/chimera/)
