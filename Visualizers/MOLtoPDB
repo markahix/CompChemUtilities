@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+import subprocess as S
+import argparse
+from glob import glob as G
+import os
+
+def ProgramCheck(program):
+    print(f"Checking for {program}...")
+    proc = S.Popen(f"which {program}",shell=True,stdout=S.PIPE,stderr=S.PIPE)
+    out,err = proc.communicate()
+    location = out.decode('utf-8')
+    if location in ["",None]:
+        print(f"***ERROR***\tProgram '{program}' not found.")
+        return False
+    return True
+
+def ChimeraMOLtoPDB(molfile):
+    pdbfile = molfile.replace(".mol",".pdb")
+    with open("_temp.com","w") as f:
+        f.write(f"open {molfile}\n")
+        f.write(f"write format pdb atomtypes amber #0 {pdbfile}\n")
+        f.write("close #0\n")
+        f.write("stop\n")
+    proc = S.Popen("chimera --nogui _temp.com",shell=True,stdout=S.PIPE,stderr=S.PIPE)
+    out,err = proc.communicate()
+    output = out.decode("utf-8")
+    print(output)
+    if G(pdbfile):
+        S.call("rm _temp.com",shell=True)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i","--input",dest = "input",help="/path/to/file/to/be/converted/",required=True)
+    args = parser.parse_args()
+    if ProgramCheck("chimera"):
+        ChimeraMOLtoPDB(args.input)
+    else:
+        print("Chimera not found.  Unable to convert.")
