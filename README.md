@@ -12,3 +12,11 @@ the script will first check for it and if unable to locate it, will advise the u
 
 **PDBtoChemDraw**
 - Generates a 2D ChemDraw-style structure from a provided single-molecule PDB.
+
+**SMILEStoChemDraw**
+- Generates a 2D ChemDraw-style structure from a provided SMILES string.
+
+## Converters
+
+**MOLtoPDB**
+- Generates a PDB from a MOL file, such as from [MolView](https://molview.org)
