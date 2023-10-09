@@ -23,5 +23,5 @@ the script will first check for it and if unable to locate it, will advise the u
 - Requires installation of [Chimera](https://www.cgl.ucsf.edu/chimera/)
 
 ## Helpful Colab Notebooks
-**EasySolventMixturesForMolecularDynamics**
+**EasySolventMixturesForMolecularDynamics** [<img src="https://colab.research.google.com/assets/colab-badge.svg">]([http://google.com.au/](https://colab.research.google.com/github/markahix/CompChemUtilities/blob/main/HelpfulColabNotebooks/EasySolventMixturesForMolecularDynamics.ipynb))
 - Streamlines the creation and use of custom solvent boxes for classical MD setups.  Allows for mixtures of arbitrary number of user-provided molecules.
