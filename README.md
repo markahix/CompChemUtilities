@@ -25,3 +25,6 @@ the script will first check for it and if unable to locate it, will advise the u
 ## Helpful Colab Notebooks
 **EasySolventMixturesForMolecularDynamics** [<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/markahix/CompChemUtilities/blob/main/HelpfulColabNotebooks/EasySolventMixturesForMolecularDynamics.ipynb)
 - Streamlines the creation and use of custom solvent boxes for classical MD setups.  Allows for mixtures of arbitrary number of user-provided molecules.
+
+**Clustering_From_CPPTRAJ** [<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/markahix/CompChemUtilities/blob/main/HelpfulColabNotebooks/Clustering_From_CPPTRAJ.ipynb)
+- Creates simple scatter plots of 2D data with markers colored by cluster number as provided by CPPTRAJ outputs.  Current version requires Google Drive access.
